@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: lightblue;
+}
+
+.container {
+    max-width: 1920px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    color:dodgerblue;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    
+}
+
+.container label {
+    cursor: pointer;
+}
+
+.container label:hover{
+    color: #fff;
+}
+
+.container input{
+    display: none;
+}
+
+.container label>img {
+    overflow: hidden;
+    height: 0;
+}
+
+.container input:checked + label>img {
+    height: 300px;
+}
+
+.container input:hover + label>img {
+    height: 300px;
+}
+
+.container:hover label>p {
+    background: url(imgs/plus.svg)no-repeat right center;
+}
+
+.container:hover input:checked + label>p {
+    background: url(imgs/cross.svg)no-repeat right center;
+}
+
+.container:hover input:hover + label>p {
+    background: url(imgs/cross.svg)no-repeat right center;
+}
+
+.container label:after{
+    content: '';
+    background: url(imgs/cross.svg);
+}
+
+@media (max-width: 820px){
+    h1 {
+        font-size: 3em;
+    }
+    
+    p {
+        font-size: 1.5em;   
+    }
+
+    img {
+        height: 200px;
+    }
+
+    .container input:checked + label>img {
+        height: 200px;
+    }
+    
+    .container input:hover + label>img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 320px){
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1em;   
+    }
+
+    img {
+        height: 100px;
+    }
+
+    .container input:checked + label>img {
+        height: 100px;
+    }
+    
+    .container input:hover + label>img {
+        height: 100px;
+    }
+}
