@@ -81,6 +81,14 @@ p {
     background: url(imgs/cross.svg)no-repeat right center;
 }
 
+.container input:active + label>p{
+    color: #fff;
+}
+
+.container input:active + label>img{
+    opacity: 0.5;
+}
+
 @media (max-width: 820px){
     h1 {
         font-size: 3em;
